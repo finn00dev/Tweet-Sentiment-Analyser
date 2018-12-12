@@ -4,10 +4,10 @@ from twitter import Twitter, OAuth, TwitterHTTPError, TwitterStream
 import json
 import string
 
-ACCESS_KEY = "ENTER YOUR OWN ACCESS KEY HERE";
-ACCESS_KEY_SECRET = "ENTER YOUR OWN ACCESS KEY SECRET HERE";
-CONSUMER_KEY = "ENTER YOUR OWN CONSUMER KEY HERE";
-CONSUME_KEY_SECRET = "ENTER YOUR OWN CONSUMER KEY SECRET HERE";
+ACCESS_KEY = "1074796956-K2giYLUhgbktbQZ5W7PI5rO9ztwrvlFxVXkoFse";
+ACCESS_KEY_SECRET = "CxwOUfMx68JrbvcodHXJxqkirzUvYOk2F1SPrhC3pzKE5";
+CONSUMER_KEY = "5hJaPQlDj9Df607bQBK3ElHQn";
+CONSUME_KEY_SECRET = "06NyEpwV4OHVHlXuBob2NCQjd7jYMqXJzfPBmU0FD67IFDKixX";
 
 twitter = Twitter(auth=
                   OAuth(ACCESS_KEY,
@@ -73,18 +73,26 @@ def doesUserExsist(name):
 
 def compute(userName):
 
+    tweets_printed = 0
+
     if(doesUserExsist(userName)):
         tweets = tweetsToArray(userName)
         for tweet in tweets:
             output = analyseTweet(tweet)
-            print(tweet)
-            print("positive:")
-            for word in output[0]:
-                print(word, "1")
-            print("negative:")
-            for word in output[1]:
-                print(word, "-1")
-            print("Total Value =", output[2], "\n")
+            if len(output[0]) > 0 and len(output[1]) > 0:
+                tweets_printed = tweets_printed + 1
+                print(tweet)
+                print("positive:")
+                for word in output[0]:
+                    print(word, "1")
+                print("negative:")
+                for word in output[1]:
+                    print(word, "-1")
+                print("Total Value =", output[2], "\n")
+
+        if tweets_printed == 0:
+            print("\nNo Recent Tweets With Sentiment Found")
+
     else:
         print("\nUser Does Not Exist")
 

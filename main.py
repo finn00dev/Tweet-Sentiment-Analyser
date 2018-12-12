@@ -13,6 +13,4 @@ while(name.lower() != "q"):
     ComputeTweets.compute(name)
     name = input("\n\nWhat is the name of the next user you are looking for? or Press Q to Quit").strip()
 
-print("\n\nThanks For Trying My Program!! :)")
-
-#print(output)
+print("\nThanks For Trying My Program!! :)")
