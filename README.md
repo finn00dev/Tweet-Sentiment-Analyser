@@ -7,7 +7,7 @@ NOTE: This github repository does not come with the required Twitter API Access 
 
 Format of Output:
 
-*Tweet*\n
+*Tweet*<br />
 positive:\n
   *all the positive keywords*\n
 negative:\n
