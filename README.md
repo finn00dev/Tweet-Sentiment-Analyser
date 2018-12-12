@@ -4,12 +4,3 @@ This is a simple console application made with Python. The application provides 
 user and their calculated sentiment values. It uses the Twitter API and a set of positive/negative keywords (provided from http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html) to analyse the sentiment of any user's recent tweets by counting the given keywords.
 
 NOTE: This github repository does not come with the required Twitter API Access Keys/Secrets, you must replace the placeholder values with your own codes.
-
-Format of Output:
-
-*Tweet*<br />
-positive:<br />
-  *all the positive keywords*<br />
-negative:<br />
-  *all the negative keywords*<br />
-Total Value: *Sentiment Value*<br />
