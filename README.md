@@ -7,9 +7,9 @@ NOTE: This github repository does not come with the required Twitter API Access 
 
 Format of Output:
 
-Tweet
-positive:
-  *all the positive keywords*
-negative:
-  *all the negative keywords*
-Total Value: *Sentiment Value*
+*Tweet*\n
+positive:\n
+  *all the positive keywords*\n
+negative:\n
+  *all the negative keywords*\n
+Total Value: *Sentiment Value*\n
